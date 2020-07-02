@@ -29,10 +29,10 @@ func run() error {
 
 	var dir string
 	pflag.StringVarP(&dir, "dir", "d", ".", `directory containing go code where you want the tags to be applied`)
-	pflag.Parse()
 
 	var files []string
 	pflag.StringArrayVarP(&files, "tags", "t", nil, `list of filenames (JSON, YAML or TOML) containing tags to add to struct fields`)
+
 	pflag.Parse()
 
 	if len(files) == 0 {
