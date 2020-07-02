@@ -150,9 +150,7 @@ func findStructs(node ast.Node) map[string]*ast.StructType {
 		switch t := n.(type) {
 		case *ast.TypeSpec:
 			if s, ok := t.Type.(*ast.StructType); ok {
-				if t.Name.Name == "CargoEvent" {
-					structs[t.Name.Name] = s
-				}
+				structs[t.Name.Name] = s
 			}
 		}
 		return true
