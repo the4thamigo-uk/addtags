@@ -90,6 +90,9 @@ func appendTags(dir string, newTags structTags) error {
 					if !ok {
 						continue
 					}
+					if fld.Tag == nil {
+						fld.Tag = &ast.BasicLit{}
+					}
 					newTag, err := addTag(unquoteTag(fld.Tag.Value), unquoteTag(fldTag))
 					if err != nil {
 						return err

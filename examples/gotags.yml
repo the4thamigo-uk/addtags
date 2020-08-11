@@ -1,0 +1,5 @@
+MyStruct1:
+  X: new:"tag1"
+  "Y": new:"tag2"
+MyStruct2:
+  Z: new:"tag3" othernew:"tag4"
